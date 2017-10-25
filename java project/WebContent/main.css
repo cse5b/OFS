@@ -1,0 +1,189 @@
+@CHARSET "ISO-8859-1";
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+header {
+  padding: 20px 0;
+}
+
+header .row,
+footer .row {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 700;
+  margin: 0;
+}
+.col-sm-1{
+	color: 00FFFF;
+	font: sans-serif;
+	margin: 0;
+	padding: 5;
+}
+header nav {
+  display: flex;
+  justify-content: flex-front;
+  flex-wrap: wrap;
+  
+}
+.nav li{
+	display: inline;
+}
+
+
+header p {
+  padding: 0 10px;
+  margin: 0;
+}
+header a {
+  padding: 0 10px;
+  margin: 0;
+  color: rgb(128 , 128 , 128);
+}
+
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+div.form
+{
+    display: block;
+    text-align: center;
+}
+input{
+    padding:8px;
+    width:100%; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-image: url('file:///C:/Users/Ravi%20Bhargav/Pictures/jumbo.jpg');
+  background-size: cover;
+  color: #ffffff;
+  height: 500px;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+
+.jumbotron h2 {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+
+.jumbotron h3 {
+  margin: 0 0 20px;
+  color: #fff;
+}
+
+section .row img {
+  margin: 0 0 30px;
+  width: 100%;
+}
+
+.col-md-6 {
+  margin: 0 0 30px;
+}
+
+.btn.btn-primary {
+  border-radius: 2px;
+  border: 0px;
+  color: #fbd1d5;
+  text-shadow: none;
+  background-color: #ffffff;
+}
+
+.btn.btn-primary:hover {
+  color: #ffffff;
+  background-color: #fbd1d5;
+}
+
+.btn-secondary {
+  background-color: #E8DFE0;
+  color: #ffffff;
+  margin: 0 0 30px;
+}
+.col-sm-4
+{
+	font-family: Courier New;
+	
+}
+
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
+}
+
+#outerbox
+{
+	width: 1980px;
+	overflow: hidden;
+}
+#sliderbox 
+{
+	position: relative;
+	width: 7680px;
+	animation-name: ashish;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+}
+#sliderbox img
+{
+	float: left;
+}
+@keyframes ashish{
+	0%
+	{
+		left:0px;
+	}
+	20%
+	{
+		left:0px;
+	}
+	25%
+	{
+		left:-1980px;
+	}
+	45%
+	{
+		left: -1980px;
+	}
+	50%
+	{
+		left: -3960px;
+	}
+	70%
+	{
+		left: -3960
+	}
+	75%
+	{
+		left: -7920
+	}
+
+}

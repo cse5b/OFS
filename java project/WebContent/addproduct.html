@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+*{
+margin:2px;
+padding:2px;
+}
+#tr{
+padding:5px;
+
+
+}
+</style>
+</head>
+<body>
+<form action="addprodservlet" method="post" enctype="multipart/form-data">
+   
+        <h1>Add product</h1>
+        <table>
+        
+            <tr>
+                <td>
+                    select category:
+                </td>
+                <td>
+                    <select name="pcat">
+						  <option value="bed selected">bed</option>
+						  <option value="chair">chair</option>
+						  <option value="sofa">sofa</option>
+						  <option value="table">table</option>
+						</select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Product Name:
+                </td>
+                <td>
+                    <input type="text" name="pname">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                   Product specification:
+                </td>
+                <td>
+                    <input type="text" width=30px height=30px name="spec">
+                    
+                </td>
+            </tr>
+           
+            <tr>
+                <td>
+                   Product material:
+                </td>
+                <td>
+                    <input type="text" name="mat">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Product warranty:
+                </td>
+                <td>
+                    <input type="text" width=10px height=5px name="war">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Product price:
+                </td>
+                <td>
+                    <input type="text" width=10px height=5px name="pri">
+                    
+                </td>
+            </tr> 
+            <tr>
+                <td>
+                   Special price:
+                </td>
+                <td>
+                    <input type="text" width=10px height=5px name="spri">
+                    
+                </td>
+            </tr>
+             <tr>
+            <td>
+            <label for="photo"> Product image:  </label>
+            </td>
+            <td>
+            <input type="file" name="image" required/><br><br>
+            
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+                <td>
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+ 
+ 
+        </table>
+</body>
+</html>
