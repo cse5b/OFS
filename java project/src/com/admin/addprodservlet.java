@@ -1,6 +1,7 @@
 package com.admin;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
@@ -16,7 +17,7 @@ import javax.servlet.http.Part;
 
 
 @WebServlet("/addprodservlet")
-@MultipartConfig(maxFileSize = 16177216)
+@MultipartConfig(maxFileSize = 16177215)
 public class addprodservlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -24,14 +25,26 @@ public class addprodservlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String pname = request.getParameter("pname");
-		String pcat = request.getParameter("cat");
+		String pcat = request.getParameter("pcat");
 	
 		String pspec = request.getParameter("spec");
 		String pmat = request.getParameter("mat");
 		String pwar = request.getParameter("war");
 		String pri = request.getParameter("pri");
 		String spri = request.getParameter("spri");
-		Part part = request.getPart("image");
+		 InputStream inputStream = null; // input stream of the upload file
+         
+	        
+	        Part filePart = request.getPart("image");
+	        if (filePart != null) {
+	            // prints out some information for debugging
+	            System.out.println(filePart.getName());
+	            System.out.println(filePart.getSize());
+	            System.out.println(filePart.getContentType());
+	             
+	            // obtains input stream of the upload file
+	            inputStream = filePart.getInputStream();
+	        }
 	    product p = new product();
 			p.setP_name(pname);
 			p.setP_price(pri);
@@ -41,17 +54,15 @@ public class addprodservlet extends HttpServlet {
 			p.setP_warranty(pwar);
 			p.setP_category(pcat);
 			p.setP_sprice(spri);
-			p.setImage(part);
+			p.setImage(inputStream);
 			try {
 			addprod ap = new addprod();
-			String prodad;
-			
-				prodad = ap.prodadd(p);
+			String prodad = ap.prodadd(p);
 			
 
 			if(prodad.equals("SUCCESS"))   //On success, you can display a message to user on Home page
 			{
-			request.getRequestDispatcher("success.html").include(request, response);
+			request.getRequestDispatcher("success.html").forward(request, response);
 			}
 			else   //On Failure, display a meaningful message to the User.
 			{

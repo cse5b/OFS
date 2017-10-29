@@ -3,8 +3,62 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+*{
+margin:2px;
+
+}
+
+select#selectoption {
+            border-left:none;
+            padding:none;
+        }
+
+        input#datahere {
+            position:relative;
+            border-right:none;
+            padding:none;
+        }
+
+}
+</style>
 </head>
 <body>
+<h1>view orders</h1>
+<form action="viewservlet" method="post">
+   
+        
+        <table>
+        
+            <tr>
+                <td>
+                    enter id:
+                </td>
+                <td>
+                    <input type="text" id="datahere" name="id" >
+                   <select id="selectoption" name="all">
+                   <option>...</option>
+                   <option>all</option>
+                 
+                   </select>
+
+                </td>
+            </tr>
+      
+ 
+    
+
+         <tr>
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+                <td>
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+ 
+ 
+        </table>
 
 </body>
 </html>

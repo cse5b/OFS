@@ -1,6 +1,8 @@
 package com.admin;
 
-import javax.servlet.http.Part;
+import java.io.InputStream;
+
+
 
 public class product {
 private int product_id;
@@ -11,8 +13,8 @@ private String p_specification;
 private String p_material;
 private String p_warranty;
 private String p_category;
-private String p_subcategory;
-private Part image;
+private InputStream image;
+
 public int getProduct_id() {
 	return product_id;
 }
@@ -62,18 +64,20 @@ public String getP_sprice() {
 public void setP_sprice(String p_sprice) {
 	P_sprice = p_sprice;
 }
-public Part getImage() {
+public InputStream getImage() {
 	return image;
 }
-public void setImage(Part image) {
+public void setImage(InputStream image) {
 	this.image = image;
 }
 @Override
 public String toString() {
 	return "product [product_id=" + product_id + ", p_name=" + p_name + ", p_price=" + p_price + ", P_sprice="
 			+ P_sprice + ", p_specification=" + p_specification + ", p_material=" + p_material + ", p_warranty="
-			+ p_warranty + ", p_category=" + p_category + ", p_subcategory=" + p_subcategory + ", image=" + image + "]";
+			+ p_warranty + ", p_category=" + p_category + ", image=" + image + "]";
 }
+
+
 
 
 }
