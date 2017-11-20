@@ -36,7 +36,7 @@ public class Login extends HttpServlet {
 		{   
 			HttpSession session = request.getSession();
 			session.setAttribute("LOGINDATA",us);
-			RequestDispatcher rd = request.getRequestDispatcher("homeafterlogin.html");
+			RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
 			rd.forward(request, response);
 		}
 		

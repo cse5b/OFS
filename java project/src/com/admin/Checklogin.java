@@ -36,7 +36,7 @@ public class Checklogin extends HttpServlet {
  		{   
  			HttpSession session = request.getSession();
  			session.setAttribute("ADMINLOGIN",r);
- 			RequestDispatcher rd = request.getRequestDispatcher("adminwelcome.jsp");
+ 			RequestDispatcher rd = request.getRequestDispatcher("adminwelcome.html");
  			rd.forward(request, response);
  		}
  		

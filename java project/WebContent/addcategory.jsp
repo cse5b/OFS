@@ -1,16 +1,17 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <title>Admin Panel</title>
-  <meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Admin panel</title>
+ <meta charset="utf-8"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<% 
-String message = (String)request.getAttribute("alertMsg");
-%>
+
 <header class="container">
 
 <div class="row">
@@ -22,14 +23,14 @@ String message = (String)request.getAttribute("alertMsg");
 <div class="col-sm-8">
 <div class="pull-right">
 <div class="d-flex flex-column">
-  <p>Hi Siddharth</p>
+ 
 </div>
 </div>
 </div>
 </div>
 
  <div class="row">
-  <h1 class="col-sm-4" style="font-family:Lucida Handwriting; font-size:300%; text-align:center;">Welcome Admin</h1>
+  <h3 class="col-sm-4" style="font-family:Lucida Handwriting; font-size:300%; text-align:center;">Welcome Admin</h3>
   </div>
 
 <div class="row">
@@ -44,8 +45,8 @@ String message = (String)request.getAttribute("alertMsg");
       <li class="active"><a href="adminwelcome.html">Home</a></li>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="register.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="logoutadmin"><span class="glyphicon glyphicon-log-out"></span>logout</a></li>
+      
     </ul>
   </div>
 </nav>
@@ -67,6 +68,12 @@ String message = (String)request.getAttribute("alertMsg");
 
     <tbody>
         
+        <tr>
+    <td><span style="color:red "><%= (request.getAttribute("errMessage") == null) ? "" 
+    :request.getAttribute("errMessage")%> </span></td>
+    <td>
+    </td>
+       </tr> 
           			<tr>
                 <td>
                     <b>Category Name:*<b>

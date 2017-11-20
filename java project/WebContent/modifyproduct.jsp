@@ -3,23 +3,53 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
 <style>
-*{
-margin:2px;
-padding:2px;
+* {
+  box-sizing: border-box;
 }
-#tr{
-padding:5px;
 
+#myInput {
+  background-image: url('C:\Users\Ravi Bhargav\Pictures\pic.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 30%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
 
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
 }
 </style>
 </head>
 <body>
-<form action="addprodservlet" method="post" enctype="multipart/form-data">
+<%
+String at = request.getParameter("id");
+int id = Integer.parseInt(at);
+%>
+<form action="modifyservlet?id=<%=id%>" method="post" enctype="multipart/form-data">
    
         <h1>Add product</h1>
-        <table>
+        <table id="myTable">
         
             <tr>
                 <td>
@@ -31,7 +61,7 @@ padding:5px;
 						  <option value="chair">chair</option>
 						  <option value="sofa">sofa</option>
 						  <option value="table">table</option>
-						</select>
+					</select>
 
                 </td>
             </tr>
@@ -40,27 +70,47 @@ padding:5px;
                     Product Name:
                 </td>
                 <td>
-                    <input type="text" name="pname">
+                    <input id="myTable" type="text" name="pname" required>
                 </td>
             </tr>
             
-            <tr>
+          
+                       <tr>
                 <td>
-                   Product specification:
+                   Product weight:
                 </td>
                 <td>
-                    <input type="text" width=30px height=30px name="spec">
+                    <input type="text"  name="spec" required="true">
                     
                 </td>
             </tr>
            
+            <tr>
+                <td>
+                   Product dimension:
+                </td>
+                <td>
+                    <input type="text" name="dim" required="true">
+                    
+                </td>
+            </tr>
+             <tr>
+                <td>
+                   Product model no.:
+                </td>
+                <td>
+                    <input type="text" name="mod" required="true">
+                    
+                </td>
+            </tr>
+             
             
             <tr>
                 <td>
                    Product warranty:
                 </td>
                 <td>
-                    <input type="text" width=10px height=5px name="war">
+                    <input id="myTable" type="text" name="war" required>
                     
                 </td>
             </tr>
@@ -69,7 +119,7 @@ padding:5px;
                    Product price:
                 </td>
                 <td>
-                    <input type="text"name="pri">
+                    <input id="myTable" type="text"  name="pri" >
                     
                 </td>
             </tr> 
@@ -78,7 +128,7 @@ padding:5px;
                    Special price:
                 </td>
                 <td>
-                    <input type="text"  name="spri">
+                    <input id="myTable" type="text"  name="spri">
                     
                 </td>
             </tr>
@@ -102,5 +152,6 @@ padding:5px;
  
  
         </table>
+     
 </body>
 </html>

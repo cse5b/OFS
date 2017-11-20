@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,9 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<% 
-String message = (String)request.getAttribute("alertMsg");
-%>
+
 <header class="container">
 
 <div class="row">
@@ -22,14 +22,14 @@ String message = (String)request.getAttribute("alertMsg");
 <div class="col-sm-8">
 <div class="pull-right">
 <div class="d-flex flex-column">
-  <p>Hi Siddharth</p>
-</div>
+  
 </div>
 </div>
 </div>
 
+
  <div class="row">
-  <h1 class="col-sm-4" style="font-family:Lucida Handwriting; font-size:300%; text-align:center;">Welcome Admin</h1>
+  <h3 class="col-sm-4" style="font-family:Lucida Handwriting; font-size:300%; text-align:center;">Welcome Admin</h3>
   </div>
 
 <div class="row">
@@ -44,8 +44,8 @@ String message = (String)request.getAttribute("alertMsg");
       <li class="active"><a href="adminwelcome.html">Home</a></li>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="register.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+   
+      <li><a href="logoutadmin"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
     </ul>
   </div>
 </nav>
@@ -56,31 +56,31 @@ String message = (String)request.getAttribute("alertMsg");
 
    
  <div class="row">        
-<h2 style="font-family:Hobo Std;color:red"><b><u>Add Category</u></b></h2>
+<h2 style="font-family:Hobo Std;color:red"><b><u>Delete Category</u></b></h2>
 </div>
 <hr>
-<form action="Addcatservlet" method="post">
-<div class="container-fluid">
-<div class="row">
 
-<table class="table">
+<form action="delcatservlet" method="post">
+ <div class="container-fluid">
+ <div class="row">
+ <table class="table">
 
     <tbody>
-        
-          			<tr>
-                <td>
-                    <b>Category Name:*<b>
-                </td>
-                <td>
-                    <input type="text" name="cat" required="true">
-
-                </td>
-             
-			
-            </tr>
+       <tr>
+    <td><span style="color:red "><%=(request.getAttribute("errMessage") == null) ? "" 
+    :request.getAttribute("errMessage")%> </span></td>
+    <td>
+    </td>
+       </tr>
+        <tr>
+		<td> <b>Enter Category id*<b></td>
+		<td><input type="text" name="id" required="true"></td>
+	
+		</tr>
+          
             <tr>
                 <td>
-                    <center><input type="submit" value="Add"></center>
+                    <center><input type="submit" value="Delete"></center>
 					
                 </td>
                 <td>
@@ -89,7 +89,6 @@ String message = (String)request.getAttribute("alertMsg");
             </tr>
 		</tbody>
     </table>
-    
 	</div>
 </div>
 </form>

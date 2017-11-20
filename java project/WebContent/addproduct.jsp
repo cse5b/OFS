@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +22,7 @@
 <div class="col-sm-8">
 <div class="pull-right">
 <div class="d-flex flex-column">
-  <p>Hi Siddharth</p>
+  
 </div>
 </div>
 </div>
@@ -42,8 +44,8 @@
       <li class="active"><a href="adminwelcome.html">Home</a></li>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="register.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      
+      <li><a href="logoutadmin"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
     </ul>
   </div>
 </nav>
@@ -65,6 +67,8 @@
     <tr>
     <td><span style="color:red "><%=(request.getAttribute("errMessage") == null) ? "" 
     :request.getAttribute("errMessage")%> </span></td>
+    <td>
+    </td>
        </tr> 
            <tr>
                 <td>
@@ -93,7 +97,7 @@
             
             <tr>
                 <td>
-                   <b>Product specification:*</b>
+                   <b>Product weight:*</b>
                 </td>
                 <td>
                     <input type="text" width=30px height=30px name="spec" required="true">
@@ -101,7 +105,25 @@
                 </td>
             </tr>
            
-            
+            <tr>
+                <td>
+                   <b>Product dimension:*</b>
+                </td>
+                <td>
+                    <input type="text" width=30px height=30px name="dim" required="true">
+                    
+                </td>
+            </tr>
+             <tr>
+                <td>
+                   <b>Product model no.:*</b>
+                </td>
+                <td>
+                    <input type="text" width=30px height=30px name="mod" required="true">
+                    
+                </td>
+            </tr>
+             
             <tr>
                 <td>
                    <b>Product warranty:</b>

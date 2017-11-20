@@ -49,6 +49,7 @@ return false;
 } 
 } 
 </script> 
+
 </head>
 <body>
 
@@ -69,7 +70,7 @@ return false;
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="fname" class="form-control"  type="text">
+  <input  name="fname" class="form-control"  type="text" required="true">
     </div>
   </div>
 </div>
@@ -81,7 +82,7 @@ return false;
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="lname" class="form-control"  type="text">
+  <input name="lname" class="form-control"  type="text" required="true">
     </div>
   </div>
 </div>
@@ -96,7 +97,7 @@ return false;
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="password"  class="form-control"  type="password">
+  <input name="password"  class="form-control"  type="password" required="true">
     </div>
   </div>
 </div>
@@ -108,7 +109,7 @@ return false;
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="conpassword"  class="form-control"  type="password">
+  <input name="conpassword"  class="form-control"  type="password" required="true">
     </div>
   </div>
 </div>
@@ -119,7 +120,7 @@ return false;
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  <input name="email"  class="form-control"  type="text">
+  <input name="email"  class="form-control"  type="text" required="true">
     </div>
   </div>
 </div>
@@ -132,7 +133,7 @@ return false;
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="mobile" placeholder="(639)" class="form-control" type="text">
+  <input name="mobile" placeholder="(639)" class="form-control" type="text" required="true">
     </div>
   </div>
 </div>

@@ -24,15 +24,6 @@ header h1 {
 	margin: 0;
 	padding: 5;
 }
-header nav {
-  display: flex;
-  justify-content: flex-front;
-  flex-wrap: wrap;
-  
-}
-.nav li{
-	display: inline;
-}
 
 
 header p {
@@ -67,7 +58,7 @@ input{
 .jumbotron {
   display: flex;
   align-items: center;
-  background-image: url('file:///C:/Users/Ravi%20Bhargav/Pictures/jumbo.jpg');
+  background-image: url('file:///C:/Users/Ravi Bhargav/git/OFS/java project/res/2.jpg');
   background-size: cover;
   color: #ffffff;
   height: 500px;

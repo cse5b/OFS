@@ -7,7 +7,11 @@ private String lname;
 private String email;
 private String password;
 private String mobile;
-
+private String gender;
+private String street;
+private String state;
+private String country;
+private String pincode;
 public int getUser_id() {
 	return user_id;
 }
@@ -54,10 +58,53 @@ public String getMobile() {
 public void setMobile(String mobile) {
 	this.mobile = mobile;
 }
+
+
 @Override
 public String toString() {
 	return "user [user_id=" + user_id + ", fname=" + fname + ", lname=" + lname + ", email=" + email + ", password="
-			+ password + " mobile=" + mobile + "]";
+			+ password + ", mobile=" + mobile + ", gender=" + gender + ", street=" + street + ", state=" + state
+			+ ", country=" + country + ", pincode=" + pincode + "]";
+}
+
+public String getGender() {
+	return gender;
+}
+
+public void setGender(String gender) {
+	this.gender = gender;
+}
+
+public String getStreet() {
+	return street;
+}
+
+public void setStreet(String street) {
+	this.street = street;
+}
+
+public String getState() {
+	return state;
+}
+
+public void setState(String state) {
+	this.state = state;
+}
+
+public String getCountry() {
+	return country;
+}
+
+public void setCountry(String country) {
+	this.country = country;
+}
+
+public String getPincode() {
+	return pincode;
+}
+
+public void setPincode(String pincode) {
+	this.pincode = pincode;
 }
 
 

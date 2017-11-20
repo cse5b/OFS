@@ -38,7 +38,7 @@ public class dblogin {
 				us.setEmail(rs.getString("email"));
 				us.setPassword(rs.getString("password"));
 				us.setUser_id(rs.getInt("user_id"));
-				us.setFname(rs.getString("fnamel"));
+				us.setFname(rs.getString("fname"));
 				us.setLname(rs.getString("lname"));
 				us.setMobile(rs.getString("mobile"));
 				
